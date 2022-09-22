@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Unav from './Unav'
 import {
     Chart as ChartJS,
@@ -24,39 +24,39 @@ function ChartDisplay() {
     
     
     
-const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top' as const , 
-      },
-      title: {
-        display: true,
-        text: 'Chart.js Bar Chart',
-      },
-    },
-  };
+// const options = {
+//     responsive: true,
+//     plugins: {
+//       legend: {
+//         position: 'top' 
+//       },
+//       title: {
+//         display: true,
+//         text: 'Chart.js Bar Chart',
+//       },
+//     },
+//   };
   
-   const data = {
-    labels,
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-      {
-        label: 'Dataset 2',
-        data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      },
-    ],
-  };
+//    const data = {
+//     labels,
+//     datasets: [
+//       {
+//         label: 'Dataset 1',
+//         data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+//         backgroundColor: 'rgba(255, 99, 132, 0.5)',
+//       },
+//       {
+//         label: 'Dataset 2',
+//         data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+//         backgroundColor: 'rgba(53, 162, 235, 0.5)',
+//       },
+//     ],
+//   };
 
   return (
     <>
     <Unav/>
-    <Bar options={options} data={data} />;
+    {/* <Bar options={options} data={data} />; */}
     </>
   )
 }
