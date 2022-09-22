@@ -43,9 +43,6 @@ function Register() {
 
     }, []);
 
-
-
-
     return (
         <div className="page">
             <div className='container'>

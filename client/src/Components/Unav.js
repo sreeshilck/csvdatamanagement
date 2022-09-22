@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom'
 
 function Unav() {
-
+    const navigate = useNavigate()
     const logout = () => {
-
+        navigate("/")
     }
     return (
         <>
