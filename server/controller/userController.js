@@ -31,7 +31,7 @@ module.exports.userRegister = async (req, res) => {
 // @route POST => /api/login
 module.exports.userLogin = async (req, res) => {
     try {
-
+        console.log(req.body);
         const { email, password } = req.body
 
         // find user in db
@@ -46,7 +46,7 @@ module.exports.userLogin = async (req, res) => {
         //return if password not matched
         if (!isPasswordMatch) return res.status(400).json({ isLoggedIn: false, msg: "Invalid Email or Password" });
 
-        res.status(400).json({ isLoggedIn: true, msg: "login success" });
+        res.status(200).json({ isLoggedIn: true, msg: "login success" });
 
     } catch (error) {
         console.error(error)
@@ -96,24 +96,6 @@ module.exports.uploadFile = async (req, res, next) => {
             }
 
         })
-
-        //console.log("user controller");
-        // console.log(req.file);
-        // const file = req.file
-        // console.log(file.originalname);
-        // //const path = `../assets/files/${file.originalname}`
-        // const path = `${file.path}`
-
-        // console.log(path);
-
-        // try {
-        //     fs.accessSync(path);
-        //     console.log("exists:", path);
-        //   } catch (err) {
-        //     console.log("DOES NOT exist:", path);
-        //     console.error(err);
-        //   }
-
 
 
     } catch (error) {
